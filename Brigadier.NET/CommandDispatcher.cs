@@ -397,10 +397,10 @@ namespace Brigadier.NET
 					{
 						child.Parse(reader, context);
 					}
-					catch (CommandSyntaxException)
-					{
-						throw;
-					}
+					//catch (CommandSyntaxException)
+					//{
+					//	throw;
+					//}
 					catch (Exception ex)
 					{
 						throw CommandSyntaxException.BuiltInExceptions.DispatcherParseException().CreateWithContext(reader, ex.Message);

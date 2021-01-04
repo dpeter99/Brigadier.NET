@@ -47,7 +47,7 @@ namespace Brigadier.NET.Tree
 
 		public override int GetHashCode()
 		{
-			return HashCode.Start;
+			return Util.HashCode.Start;
 		}
 
 		public override IArgumentBuilder<TSource, CommandNode<TSource>> CreateBuilder()

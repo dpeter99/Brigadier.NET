@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.1</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>Brigadier.NET</AssemblyName>
     <LangVersion>latest</LangVersion>
     <Authors>Steven Blom</Authors>
@@ -16,6 +16,7 @@ This port is not supported by Mojang or Microsoft.</Description>
 
   <ItemGroup>
     <PackageReference Include="System.Memory" Version="4.5.1" />
+    <PackageReference Include="System.Memory" Version="4.5.4" />
   </ItemGroup>
 
 </Project>

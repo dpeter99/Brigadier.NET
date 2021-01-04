@@ -37,7 +37,7 @@ namespace Brigadier.NET.Context
 
 		public override int GetHashCode()
 		{
-			return HashCode.Start
+			return Util.HashCode.Start
 				.Hash(Node)
 				.Hash(Range);
 		}

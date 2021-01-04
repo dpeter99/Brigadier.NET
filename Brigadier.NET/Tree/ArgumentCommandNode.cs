@@ -107,7 +107,7 @@ namespace Brigadier.NET.Tree
 
 		public override int GetHashCode()
 		{
-			return HashCode.Start
+			return Util.HashCode.Start
 				.Hash(_name)
 				.Hash(Type);
 		}

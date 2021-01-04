@@ -32,7 +32,7 @@ namespace Brigadier.NET.Suggestion
 
 		public override int GetHashCode()
 		{
-			return HashCode.Start
+			return Util.HashCode.Start
 				.Hash(Value);
 		}
 
