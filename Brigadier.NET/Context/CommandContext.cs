@@ -73,6 +73,15 @@ namespace Brigadier.NET.Context
 			}
 		}
 
+		public bool HasArgument<T>(string name)
+        {
+			if (!_arguments.TryGetValue(name, out var argument))
+			{
+				return false;
+			}
+			return true;
+		}
+
 		public override bool Equals(object obj)
 		{
 			if (ReferenceEquals(null, obj)) return false;
