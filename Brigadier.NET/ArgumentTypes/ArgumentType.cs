@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Brigadier.NET.Context;
 using Brigadier.NET.Exceptions;
@@ -17,5 +18,10 @@ namespace Brigadier.NET.ArgumentTypes
 		}
 
 		public virtual IEnumerable<string> Examples => new string[0];
-	}
+
+		public virtual T Parse<TSource>(IStringReader reader, TSource source)
+        {
+			return Parse(reader);
+        }
+    }
 }
