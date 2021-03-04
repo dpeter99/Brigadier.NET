@@ -16,13 +16,14 @@ namespace Brigadier.NET.Tree
 		private readonly IDictionary<string, LiteralCommandNode<TSource>> _literals = new Dictionary<string, LiteralCommandNode<TSource>>();
 		private readonly IDictionary<string, ArgumentCommandNode<TSource>> _arguments = new Dictionary<string, ArgumentCommandNode<TSource>>();
 
-		protected CommandNode(Command<TSource> command, Predicate<TSource> requirement, CommandNode<TSource> redirect, RedirectModifier<TSource> modifier, bool forks)
+		protected CommandNode(Command<TSource> command, Predicate<TSource> requirement, CommandNode<TSource> redirect, RedirectModifier<TSource> modifier, bool forks, string desc = "")
 		{
 			Command = command;
 			Requirement = requirement;
 			Redirect = redirect;
 			RedirectModifier = modifier;
 			IsFork = forks;
+			Description = desc;
 		}
 
 		public Command<TSource> Command { get; set; }
@@ -143,6 +144,8 @@ namespace Brigadier.NET.Tree
 		public abstract string Name { get; }
 
 		public abstract string UsageText { get; }
+
+		public string Description { get; set; }
 
 		/// <exception cref="CommandSyntaxException"></exception>
 		public abstract void Parse(StringReader reader, CommandContextBuilder<TSource> contextBuilder);

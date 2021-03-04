@@ -11,8 +11,8 @@ namespace Brigadier.NET.Tree
 {
 	public class LiteralCommandNode<TSource> : CommandNode<TSource>, IEquatable<LiteralCommandNode<TSource>>
 	{
-		public LiteralCommandNode(string literal, Command< TSource > command, Predicate<TSource> requirement, CommandNode<TSource> redirect, RedirectModifier<TSource> modifier, bool forks)
-			: base(command, requirement, redirect, modifier, forks)
+		public LiteralCommandNode(string literal, Command< TSource > command, Predicate<TSource> requirement, CommandNode<TSource> redirect, RedirectModifier<TSource> modifier, bool forks, string desc = "")
+			: base(command, requirement, redirect, modifier, forks, desc)
 		{
 			Literal = literal;
 		}
